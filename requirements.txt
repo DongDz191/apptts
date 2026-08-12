@@ -1,0 +1,16 @@
+# torch phải khớp phiên bản CUDA của máy vast — image PyTorch đã có sẵn, đừng cài đè.
+# Kiểm tra: python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+
+qwen-tts>=0.1.0
+gradio>=5.0.0
+soundfile>=0.12.1
+numpy>=1.26
+
+# Chỉ cần nếu chạy api_server.py
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+
+# Tùy chọn, giảm VRAM và tăng tốc. Cài riêng vì cần build:
+#   MAX_JOBS=4 pip install -U flash-attn --no-build-isolation
+# flash-attn
